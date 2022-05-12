@@ -37,7 +37,6 @@ public class queueByArray {
     }
     public int dequeue(){
         if(isEmpty()){
-
             System.out.println("queue is empty");
         }
         int data=arr[front];
