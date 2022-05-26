@@ -112,6 +112,15 @@ public class binaryTree {
             }
         }
     }
+    public int findHeight(treeNode root){
+        if(root==null){
+            return -1;
+        }
+        int left=findHeight(root.left);
+        int right=findHeight(root.right);
+        int height=Math.max(left,right)+1;
+        return height;
+    }
 
 
 
@@ -123,6 +132,9 @@ public class binaryTree {
         bt.postOrder();
         System.out.println();
         bt.levelOrderTraversal();
+        System.out.println();
+        System.out.println("Height of the binary tree =>" + bt.findHeight(bt.root));
+
 
     }
 }
